@@ -1,0 +1,65 @@
+site_name: wjy's notebook
+
+extra_css:
+  - style/extra.css
+
+nav: 
+  - 主页: index.md
+  - 杂七杂八:
+    - Material 使用: 杂七杂八/material.md
+    - test: 杂七杂八/test.md
+
+theme: 
+  name: 'material'
+  features:
+    - content.code.copy
+    - content.code.annotate  
+    - navigation.tracking   # 在url中使用标题定位锚点
+    - navigation.tabs       # 顶部显示导航顶层nav（也就是第一个节点）
+    # - navigation.tabs.sticky # 滚动隐藏顶部nav，需要配合navigation.tabs使用
+    - navigation.sections   # nav节点缩进
+    # - navigation.expand     # 不折叠左侧nav节点
+    - navigation.indexes    # 指定节点index pages ，跟instant不兼容
+    - toc.integrate         # 右侧生产目录
+    - navigation.top        # 一键回顶部
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to happy mode
+      primary: teal
+      accent: teal
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+      primary: blue grey
+      accent: teal
+  custom_dir: overrides
+  language: zh
+
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  
